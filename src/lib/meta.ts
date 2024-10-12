@@ -10,7 +10,7 @@ export function commonMetaData({ description, title }: CommonMetaData): Metadata
     return {
         authors: [{ name: '@pyyupsk' }],
         description,
-        metadataBase: new URL('https://axiom-boilerplate.vercel.app'),
+        metadataBase: new URL('https://nestor-vrc.vercel.app'),
         openGraph: {
             description,
             images: [

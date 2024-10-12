@@ -68,7 +68,7 @@
 
 @layer base {
     * {
-        @apply border-border;
+        @apply scroll-smooth border-border;
     }
 
     body {
@@ -101,27 +101,27 @@
     }
 
     h2 {
-        @apply text-4xl;
-    }
-
-    h3 {
         @apply text-3xl;
     }
 
-    h4 {
-        @apply text-2xl;
-    }
-
-    h5 {
+    h3 {
         @apply text-xl;
     }
 
-    h6 {
+    h4 {
         @apply text-lg;
     }
 
+    h5 {
+        @apply text-base;
+    }
+
+    h6 {
+        @apply text-sm;
+    }
+
     p {
-        @apply text-base leading-relaxed;
+        @apply text-sm leading-relaxed;
     }
 
     a {
