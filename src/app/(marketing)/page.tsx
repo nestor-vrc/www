@@ -1,7 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { BackgroundBeams } from '@/components/ui/background-beams';
 import { buttonVariants } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Container } from '@/components/ui/container';
 import {
     ArrowRightIcon,
@@ -14,7 +12,7 @@ import {
 import Link from 'next/link';
 import Balancer from 'react-wrap-balancer';
 
-import { team } from './_constants/team';
+import { TeamContainer } from './_components/team/team-container';
 import { tools } from './_constants/tools';
 
 export default function Page() {
@@ -142,47 +140,7 @@ export default function Page() {
             </section>
 
             {/* Team */}
-            <section className="bg-gradient-to-b from-muted/50 to-background py-20">
-                <Container className="container">
-                    <h2>Our Team</h2>
-                    <p className="mt-4 text-base text-foreground/80">
-                        <Balancer>
-                            Meet the passionate individuals behind Nestor VRC. We are a diverse
-                            group of VRChat enthusiasts, developers, and creators who share a love
-                            for virtual reality. Together, we aim to create a supportive environment
-                            that encourages exploration and creativity.
-                        </Balancer>
-                    </p>
-                </Container>
-                <Container className="container mt-12 grid gap-8 md:grid-cols-3">
-                    {team.map((member, index) => (
-                        <Card key={index}>
-                            <CardHeader className="flex flex-col items-center">
-                                <Avatar className="mb-4 size-32">
-                                    <AvatarImage
-                                        alt={member.name}
-                                        className="rounded-full"
-                                        src={member.avatar}
-                                    />
-                                    <AvatarFallback>
-                                        {member.name
-                                            .split(' ')
-                                            .map((n) => n[0])
-                                            .join('')}
-                                    </AvatarFallback>
-                                </Avatar>
-                                <CardTitle>{member.name}</CardTitle>
-                                <CardDescription>{member.role}</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-center text-sm text-muted-foreground">
-                                    <Balancer>{member.bio}</Balancer>
-                                </p>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </Container>
-            </section>
+            <TeamContainer />
 
             {/* CTA */}
             <section className="py-40">
